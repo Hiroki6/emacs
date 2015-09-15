@@ -26,7 +26,13 @@
 (define-key global-map (kbd "C-t") 'other-window)
 
 ;;; オートインデントでスペースを使う
-(setq default-tab-width 2 indent-tabs-mode nil)
+(setq-default tab-width 2 indent-tabs-mode nil)
+
+;;; マーク
+(setq transient-mark-mode t)
+
+;;; リージョン解除
+(global-set-key (kbd "C-M-g") 'keyboard-escape-quit)
 
 ;;; 文字サイズ設定
 (set-face-attribute 'default nil :height 130)
